@@ -1,12 +1,9 @@
 pipeline {
     agent any
-    tools {
-        nodejs "NodeJS"
-    }
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Vinhguy/BTL_CauHInhMang.git', credentialsId: 'github-ssh-key', branch: 'main'
+                git url: 'https://github.com/Snookari/BTL_CauHinhMang.git', credentialsId: 'git-private-key', branch: 'main'
             }
         }
         stage('Verify') {
